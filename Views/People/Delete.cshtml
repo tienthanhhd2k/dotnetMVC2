@@ -1,0 +1,16 @@
+@model dotnetcoremvc2.Models.PersonModel
+
+@{
+    ViewData["Title"] = "Delete person";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>Co chac chan muon xoa nguoi nay?</p>
+<h4>@Model.Id</h4>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+        <input type="submit" value="Xóa" class="btn btn-danger"/>
+        <a asp-action="Index">Danh sách người </a>
+    </form>
+</div>
